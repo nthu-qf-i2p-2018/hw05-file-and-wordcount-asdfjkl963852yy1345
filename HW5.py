@@ -32,6 +32,7 @@ def main(filename):
         d.update(add_dict)
         
     with open("wordcount.csv" , "w") as csv_file:
+        print("word","count",file=csv_file,sep=",")
         for word,count in count.most_common():
             print(word,count,file=csv_file,sep=",")
     
@@ -39,6 +40,7 @@ def main(filename):
     f=open("wordcount.json", "w") 
     json.dump(d , f)
     
+        
         
             
         
